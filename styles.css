@@ -1,0 +1,348 @@
+/* ===== Базовий стиль ===== */
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 20px;
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.4s ease, color 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Центрування контенту по горизонталі */
+  min-height: 100vh;
+}
+
+/* ===== Денна тема (синя) ===== */
+body.light-theme {
+  background-color: #e3f2fd; /* Світло-синій фон */
+  color: #1e88e5; /* Основний синій колір тексту */
+}
+
+body.light-theme h1,
+body.light-theme h2,
+body.light-theme strong {
+  color: #1565c0; /* Темно-синій для заголовків та важливого тексту */
+}
+
+body.light-theme .section {
+  background-color: #bbdefb; /* Світло-блакитний колір секцій */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme h2 {
+  background-color: #90caf9; /* Блакитний колір заголовків секцій */
+  border-left-color: #1e88e5;
+  border-bottom: 2px solid #64b5f6;
+}
+
+body.light-theme ul li::marker {
+  color: #1e88e5;
+}
+
+body.light-theme .modal-content button {
+  background-color: #1e88e5;
+}
+
+body.light-theme .modal-content button:hover {
+  background-color: #1565c0;
+}
+
+/* ===== Темна тема (темно-синя) ===== */
+body.dark-theme {
+  background-color: #1a237e; /* Темно-синій фон */
+  color: #9fa8da; /* Світло-фіолетовий колір тексту */
+}
+
+body.dark-theme h1,
+body.dark-theme h2,
+body.dark-theme strong {
+  color: #c5cae9; /* Світло-сірий для заголовків та важливого тексту */
+}
+
+body.dark-theme .section {
+  background-color: #283593; /* Темно-фіолетовий колір секцій */
+  box-shadow: 0 1px 3px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme h2 {
+  background-color: #303f9f; /* Ще темніший фіолетовий для заголовків секцій */
+  border-left-color: #5c6bc0;
+  border-bottom: 2px solid #3949ab;
+}
+
+body.dark-theme ul li::marker {
+  color: #5c6bc0;
+}
+
+body.dark-theme .modal-content {
+  background: #303f9f;
+  color: #e0e0e0;
+}
+
+body.dark-theme .modal-content input,
+body.dark-theme .modal-content textarea {
+  background: #3949ab;
+  border: 1px solid #5c6bc0;
+  color: #fff;
+}
+
+body.dark-theme .modal-content button {
+  background-color: #5c6bc0;
+  color: #000;
+}
+
+body.dark-theme .modal-content button:hover {
+  background-color: #3f51b5;
+}
+
+body.dark-theme .system-info {
+  background-color: #283593;
+  color: #b39ddb;
+}
+
+/* ===== Контейнер для профілю ===== */
+.profile-container {
+  background-color: #bbdefb; /* Синій фон для профілю (світла тема) */
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Займає більшу частину ширини */
+  max-width: 600px; /* Обмежує максимальну ширину */
+}
+
+body.dark-theme .profile-container {
+  background-color: #3949ab; /* Темно-синій фон для профілю (темна тема) */
+  color: #9fa8da;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.05);
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 3px solid #1e88e5; /* Синя облямівка для фото */
+}
+
+body.dark-theme .profile-photo {
+  border-color: #5c6bc0; /* Фіолетова облямівка для фото в темній темі */
+}
+
+.profile-name {
+  font-size: 28px;
+  color: #c01515;
+  margin-bottom: 5px;
+}
+
+body.dark-theme .profile-name {
+  color: #c5cae9;
+}
+
+.contact-info {
+  font-size: 16px;
+  color: #1e88e5;
+}
+
+body.dark-theme .contact-info {
+  color: #9fa8da;
+}
+
+.contact-info strong {
+  color: #15b5c0;
+}
+
+body.dark-theme .contact-info strong {
+  color: #c5cae9;
+}
+
+/* ===== Основний контент (дві колонки) ===== */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 90%;
+  max-width: 1200px;
+  margin-bottom: 20px; /* Додано відступ знизу */
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== Заголовки секцій ===== */
+h2 {
+  color: #7315c0;
+  border-bottom: 2px solid #64b5f6;
+  padding-bottom: 8px;
+  margin-top: 25px;
+  font-size: 22px;
+  background-color: #90caf9;
+  padding: 8px 12px;
+  border-radius: 5px 5px 0 0;
+  border-left: 4px solid #000000;
+}
+
+body.dark-theme h2 {
+  color: #c5cae9;
+  border-bottom: 2px solid #3949ab;
+  background-color: #303f9f;
+  border-left-color: #5c6bc0;
+}
+
+/* ===== Списки ===== */
+ul {
+  list-style-type: disc;
+  margin-left: 25px;
+  margin-top: 8px;
+}
+
+ul li {
+  margin-bottom: 6px;
+  font-size: 16px;
+  color: #37474f; /* Темно-сірий текст для списків у світлій темі */
+}
+
+body.dark-theme ul li {
+  color: #e0e0e0; /* Світло-сірий текст для списків у темній темі */
+}
+
+ul li::marker {
+  font-size: 1em;
+}
+
+/* ===== Секції ===== */
+.section {
+  background-color: #bbdefb;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== Кнопка перемикання теми ===== */
+#themeToggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #094375;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#themeToggle:hover {
+  background-color: #011c3b;
+}
+
+body.dark-theme #themeToggle {
+  background-color: #293577;
+  color: #fff;
+}
+
+/* ===== Модальне вікно ===== */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  overflow: auto;
+}
+
+.modal-content {
+  padding: 20px;
+  margin: 15% auto;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal .close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+}
+
+body.dark-theme .modal .close {
+  color: #ccc;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: calc(100% - 16px);
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #37474f; /* Колір тексту вводу у світлій темі */
+}
+
+body.dark-theme .modal-content input,
+body.dark-theme .modal-content textarea {
+  color: #e0e0e0; /* Колір тексту вводу в темній темі */
+}
+
+.modal-content button {
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ===== Інформація про систему ===== */
+.system-info {
+  background-color: #e3f2fd; /* Світло-синій фон для інформації про систему */
+  color: #1e88e5;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  margin-top: auto;
+  width: 100%; /* Займає всю ширину футера */
+}
+
+body.dark-theme .system-info {
+  background-color: #3949ab; /* Темно-синій фон для інформації про систему */
+  color: #9fa8da;
+}
+
+/* ===== Блок коментарів ===== */
+.comments-block {
+  grid-column: 1 / -1; /* Займає всю ширину обох колонок */
+  background-color: #00e6e6; /* Світло-блакитний фон */
+  border: 2px dashed #0703e5; /* Виділяюча рамка */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+body.dark-theme .comments-block {
+  background-color: #1e293b; /* Темний фон для темної теми */
+  border: 2px dashed #64b5f6;
+  color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}

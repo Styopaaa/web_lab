@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>CV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="themeToggle" class="contact-btn">Змінити тему (автоматично)</button>
+
+    <div class="container">
+        <div class="photo-section">
+            <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Тимчина Степан Андрійович" class="profile-photo"/>
+            <h1>Тимчина Степан Андрійович</h1>
+            <p class="contact-info">
+                Студент Кібербезпеки<br>
+            </p>
+        </div>
+
+        <div class="main-content">
+            <div class="column">
+                <div class="section">
+                    <h2>Про мене</h2>
+                    <p>Цікавлюсь інформаційною безпекою, мережами, етичним хакінгом та сучасними технологіями захисту даних.</p>
+                </div>
+
+                <div class="section">
+                    <h2>Освіта</h2>
+                    <ul>
+                        <li>Львівська політехніка<br>
+                            Інститут комп'ютерних технологій та метрології<br>
+                            Спеціальність: Кібербезпека<br>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Навички</h2>
+                    <ul>
+                        <li>Основи Linux, Windows та командного рядка</li>
+                        <li>Базові знання комп'ютерних мереж</li>
+                        <li>Робота з Wireshark, Cisco Packet Tracer, Postman, Burp Suite</li>
+                        <li>Основи Python</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2>Досвід роботи</h2>
+                    <ul>
+                        <li>Курси - "Хмарні технології"</li>
+                        <li>Курси - "Основи кібербезпеки"</li>
+                    </ul>
+                </div>
+            </div>
+
+                <div class="section">
+                    <h2>Особисті якості</h2>
+                    <ul>
+                        <li>Аналітичне мислення та уважність до деталей</li>
+                        <li>Відповідальність, стресостійкість і самостійність</li>
+                        <li>Вміння працювати в команді</li>
+                        <li>Жага до навчання та саморозвитку</li>
+                    </ul>
+                </div>
+
+                <div class="section comments-block">
+                    <h2>Коментарі роботодавців</h2>
+                    <div id="commentsContainer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="system-info">
+        <div id="browser-info"></div>
+    </footer>
+
+    <div id="feedbackModal" class="modal hidden">
+        <div class="modal-content">
+            <span id="closeModal" class="close">&times;</span>
+            <h2>Форма зворотного зв'язку</h2>
+            <form action="https://formspree.io/f/xjkwydag" method="POST">
+                <input type="text" name="name" placeholder="Ім’я" required><br><br>
+                <input type="email" name="email" placeholder="Email" required><br><br>
+                <input type="tel" name="phone" placeholder="Телефон"><br><br>
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea><br><br>
+                <button type="submit">Відправити</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
